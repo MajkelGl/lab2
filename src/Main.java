@@ -1,6 +1,53 @@
+import java.util.*;
+import java.util.TreeSet;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        System.out.println("hashset");
+        HashSet<String> set1 = new HashSet<String>();
+        set1.add("Dzien dobry");
+        set1.add("Milo mi cie poznac");
+        set1.add("Jak sie nazywasz");
+
+        for (String value : set1)
+            System.out.print(value + "   ");
+
+        System.out.println("TREESET\n");
+        TreeSet<String> set = new TreeSet<String>();
+        set.add("Dzien dobry");
+        set.add("Milo mi cie poznac");
+        set.add("Jak sie nazywasz");
+
+        Iterator value = set.iterator();
+
+        while (value.hasNext()) {
+            System.out.println(value.next());
+        }
+
+        TreeMap<Integer, String> tree_map = new TreeMap<>();
+
+        tree_map.put(15, "Kasia");
+        tree_map.put(20, "Marek");
+        tree_map.put(1, "Michal");
+        tree_map.put(2, "Majkel");
+        tree_map.put(1, "Kacper");
+
+        System.out.println("TreeMap: " + tree_map);
+
+        System.out.println(tree_map.firstKey());
+        System.out.println("TreeMap po firstKey: " + tree_map);
+
+
+        HashMap<Integer,String > hash_map = new HashMap<>();
+
+        hash_map.put(11,"Maja");
+        hash_map.put(1,"Maja");
+        hash_map.put(2,"Michal");
+        hash_map.put(5,"Igor");
+        hash_map.put(12,"Filip");
+
+        System.out.println("HashMap: " + hash_map);
     }
 }
 
